@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/61757135b9.js" crossorigin="anonymous"></script>
+    <title>Notes</title>
+
+    <link rel="stylesheet" type="text/css" href="notes.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1><i class="fa-regular fa-note-sticky"></i> Notes</h1>
+    </div>
+    <div class="btn-div">
+        <button class="learn-more add" id="add">
+            <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Add note</span>
+        </button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="model_in">
+                <h3>Create Your Note Here!!!</h3>
+                <textarea id="text1" class="dtext" placeholder="Enter your text"></textarea>
+                <input id="dbtn" type="button" value="Create" onclick="check_and_add_note()">
+            </div>
+        </div>
+    </div>
+    <script src="notes.js"></script>
+</body>
+
+</html>

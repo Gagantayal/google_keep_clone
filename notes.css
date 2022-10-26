@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@100&display=swap');
+body
+{
+    margin:0;
+    padding:0;
+    background-color: rgb(245, 245, 245);
+}
+h1
+{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #dc9a37;
+    width: 100%;
+    height: 5vh;
+    margin: 0%;
+    padding: 0.5%;
+    position: fixed;
+    z-index: 1000;
+
+}
+/* button style start */
+.btn-div {
+    position: fixed;
+    z-index: 999;
+    top: 6rem;
+    margin-bottom: 100px;
+    right: 1rem;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    }
+    /* */
+    button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    }
+    button.learn-more {
+    width: 12rem;
+    height: auto;
+    }
+    button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    
+    height: 3rem;
+    background: #dc9a37;
+    border-radius: 1.625rem;
+    }
+    button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+    }
+    button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+    }
+    .main
+    {
+        padding: 1rem;
+    }
+    /* */
+    button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+    }
+    button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    }
+    button:hover .circle {
+    width: 100%;
+    }
+    button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+    }
+    button:hover .button-text {
+    color: #fff;
+    }
+    /* button style end */
+        .note {
+        background-color: #fff;
+        margin: 30px 20px;
+        height: 22vh;
+        width: 25vw;
+        overflow-y:scroll;
+        margin-top: 7rem;
+        box-shadow: inset 0px 0px 4px rgba(193, 186, 191, 0.998),
+        inset 0px -1px 0px rgb(165, 160, 164);
+        float:left;
+        } 
+        .note .operation {   
+        display: flex;
+        justify-content:flex-end; 
+        padding: 0.5rem;
+        }
+        .note .operation button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        }
+        .note textarea {
+        outline: none;
+        font-family: inherit;
+        font-size: 1.2rem;
+        border: none;
+        height: 300px;
+        width: 100%;
+        padding: 20px;
+
+        }
+        .fa-edit,
+        .fa-trash-alt,
+        .fa-check {
+        color: #fff;
+        padding: 10px;
+        background-color: #2ecc71;
+        border-radius: 50%;
+        }
+        .fa-trash-alt {
+        background-color: #e74c3c;
+        }
+        .fa-check{
+            background-color: rgb(219, 219, 54);
+            display: none;
+        }
+        /* .fa-edit{
+            display:none;
+        } */
+        .fa-edit:hover {
+        background-color: #fff;
+        color: #27ae60;
+        filter: drop-shadow(0px 10px 8px rgb(219, 218, 218));
+        }
+        .fa-check:hover {
+        background-color: #fff;
+        color: yellow;
+        filter: drop-shadow(0px 10px 8px rgb(219, 218, 218));
+        }
+        .fa-trash-alt:hover {
+        background-color: #fff;
+        color: #e74c3c;
+        filter: drop-shadow(0px 10px 8px rgb(219, 218, 218));
+        }
+        .hidden {
+        display: none;
+        }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          }
+          
+          /* Modal Content */
+          .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+          }
+          
+          /* The Close Button */
+          .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          .model_in
+          {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .dtext
+          {
+            width: 30vw;
+            height: 15vh;
+            margin-bottom:4%;
+            border-radius: 1%;
+            box-shadow:#282936;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+          }
+          h3
+          {
+            font-family: 'Montserrat', sans-serif;
+          }
+          #dbtn
+          {
+            /* background-color: #7df1ad;
+            text-align: center; */
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5%;
+
+          }
+          @media only screen  and (max-width:420px)
+          {
+              .btn-div
+              {
+                top: 2.8rem;
+              }
+          }
