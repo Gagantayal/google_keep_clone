@@ -271,4 +271,20 @@ h1
               {
                 top: 2.8rem;
               }
+              .note
+              {
+                width: 80vw;
+                height: 30vh;
+              }
+          }
+          @media (min-width:420px) and (max-width:1220px)
+          {
+              h1
+              {
+                height: 3vh;
+              }
+              .btn-div
+              {
+                top: 3.3rem;
+              }
           }

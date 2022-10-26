@@ -24,6 +24,7 @@ function check_and_add_note() {
 }
 
 const addNewNote = (text) => {
+    document.getElementById("text1").value = "";
     document.getElementById('myModal').style.display = "none";
     const note = document.createElement('div');
     note.classList.add('note');
