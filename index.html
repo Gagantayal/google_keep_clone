@@ -12,9 +12,15 @@
 </head>
 
 <body>
-    <div class="heading">
-        <h1><i class="fa-regular fa-note-sticky"></i> Notes</h1>
-    </div>
+        <div class="heading">            
+            <div class="head"><i class="fa-regular fa-note-sticky"></i>Notes</div>
+            
+            <div class="nav">
+                <div class="nav_1"><a href="#">Your Notes</a></div>
+                <div class="nav_1"><a href="#">Share</a></div>
+                <div id="alert" class="nav_1">Alert</div>
+            </div>    
+        </div>
     <div class="btn-div">
         <button class="learn-more add" id="add">
             <span class="circle" aria-hidden="true">
@@ -31,8 +37,20 @@
             <span class="close">&times;</span>
             <div class="model_in">
                 <h3>Create Your Note Here!!!</h3>
+                <textarea id="text2" class="dtext" placeholder="Enter Note Name"></textarea>
                 <textarea id="text1" class="dtext" placeholder="Enter your text"></textarea>
                 <input id="dbtn" type="button" value="Create" onclick="check_and_add_note()">
+            </div>
+        </div>
+    </div>
+    <div id="myModal_1" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="model_in">
+                <h3>Create Your ALERT Here!!!</h3>
+                <textarea id="text3" class="dtext" placeholder="Enter your text"></textarea>
+                <input id="dbtn" type="button" value="Alert" onclick="alert_1()">
             </div>
         </div>
     </div>

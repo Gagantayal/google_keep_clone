@@ -11,6 +11,18 @@ const updateLs = () => {
     console.log(notes);
     localStorage.setItem('notes', JSON.stringify(notes));
 }
+function alert_1()
+{
+    var c=document.getElementById('text3').value;
+    if (c == '') {
+        alert("You alert nothing !!!!!!   \
+        pls add something");
+    }
+    else {
+        alert(c);
+    }
+
+}
 
 function check_and_add_note() {
     var a = document.getElementById('text1').value;
@@ -19,17 +31,21 @@ function check_and_add_note() {
     }
     else {
         addNewNote(a);
+        var b = document.getElementById('text2').value;
+        document.getElementById("notehead").innerHTML= b;
         updateLs();
     }
 }
 
 const addNewNote = (text) => {
     document.getElementById("text1").value = "";
+    //document.getElementById("text2").value = "";
     document.getElementById('myModal').style.display = "none";
     const note = document.createElement('div');
     note.classList.add('note');
     const htmlData = `
     <div class="operation">
+        <p id="notehead"></p>
         <button class="save"><i class="fa-solid fa-check" id="save-txt"></i></button>
         <button class="edit"><i class="fas fa-edit" id="edit-txt"></i></button>
         <button class="delete"><i class="fas fa-trash-alt"></i></button>
@@ -74,8 +90,10 @@ const notes = JSON.parse(localStorage.getItem('notes'));
 console.log(notes)
 if (notes) { notes.forEach((note) => addNewNote(note)) };
 var modal = document.getElementById("myModal");
+console.log(modal)
 // Get the button that opens the modal
 var btn = document.getElementById("add");
+console.log(btn)
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
@@ -90,5 +108,24 @@ span.onclick = function () {
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+}
+var alert_modal = document.getElementById("myModal_1");
+// Get the button that opens the modal
+var alert_btn = document.getElementById("alert");
+// Get the <span> element that closes the modal
+var alert_span = document.getElementsByClassName("close")[1];
+// When the user clicks the button, open the modal 
+alert_btn.onclick = function () {
+    alert_modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+alert_span.onclick = function () {
+    alert_modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == alert_modal) {
+        alert_modal.style.display = "none";
     }
 }

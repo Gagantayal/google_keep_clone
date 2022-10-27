@@ -6,17 +6,40 @@ body
     padding:0;
     background-color: rgb(245, 245, 245);
 }
-h1
+.heading
 {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #dc9a37;
-    width: 100%;
-    height: 5vh;
-    margin: 0%;
+  display:flex;
+  background-color: #dc9a37;
+  justify-content: space-between;
+  width: 100%;
+  height: 5vh;
+  position: fixed;
+  z-index: 1000;
+}
+.nav
+{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  color: #020202; 
+  font-weight: bolder;
+  padding-top: .7%;
+  padding-right: 5%; 
+  width:250px;
+}
+a{
+  text-decoration: none;
+  color: #020202; 
+}
+.nav_1
+{ 
+}
+.head
+{
+    font-family: 'Montserrat', sans-serif; 
     padding: 0.5%;
-    position: fixed;
-    z-index: 1000;
-
+    font-size: 25px;
+    font-weight: bold;  
 }
 /* button style start */
 .btn-div {
@@ -117,11 +140,11 @@ h1
     }
     /* button style end */
         .note {
-        background-color: #fff;
+        background-color: rgb(221, 234, 241);
         margin: 30px 20px;
         height: 22vh;
         width: 25vw;
-        overflow-y:scroll;
+        overflow-y:hidden;
         margin-top: 7rem;
         box-shadow: inset 0px 0px 4px rgba(193, 186, 191, 0.998),
         inset 0px -1px 0px rgb(165, 160, 164);
@@ -155,11 +178,11 @@ h1
         .fa-check {
         color: #fff;
         padding: 10px;
-        background-color: #2ecc71;
+        background-color: #2e48cc;
         border-radius: 50%;
         }
         .fa-trash-alt {
-        background-color: #e74c3c;
+        background-color:rgb(164, 153, 153);
         }
         .fa-check{
             background-color: rgb(219, 219, 54);
@@ -228,6 +251,23 @@ h1
             display: flex;
             flex-direction: column;
             align-items: center;
+          }
+          #text2
+          {
+            width: 30vw;
+            height: 7vh;
+          }
+          #text3
+          {
+            width: 25vw;
+            height: 5vh;
+          }
+          #notehead
+          {
+            position: relative;
+            z-index: 500;
+            font-size: 10px;
+            color: #000;
           }
           .dtext
           {
