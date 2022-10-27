@@ -127,5 +127,24 @@ alert_span.onclick = function () {
 window.onclick = function (event) {
     if (event.target == alert_modal) {
         alert_modal.style.display = "none";
+}
+}
+var share_modal = document.getElementById("myModal_2");
+// Get the button that opens the modal
+var share_btn = document.getElementById("share");
+// Get the <span> element that closes the modal
+var share_span = document.getElementsByClassName("close")[2];
+// When the user clicks the button, open the modal 
+share_btn.onclick = function () {
+    share_modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+share_span.onclick = function () {
+    share_modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == share_modal) {
+        share_modal.style.display = "none";
     }
 }
