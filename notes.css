@@ -344,6 +344,10 @@ a{
           }
           @media (min-width:420px) and (max-width:1220px)
           {
+            .heading
+            {
+              height: 3vh;
+            }
               h1
               {
                 height: 3vh;
